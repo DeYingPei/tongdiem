@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nhập điểm</title>
+</head>
+<body>
+        <h1>Tính tổng điểm môn học</h1>
+        Điểm chuyên cần: <input type="number" id="diemcc"><br>
+        Điểm thi giữa kì:&ensp; <input type="number" id="diemkt"><br>
+        Điểm thi kết thúc: <input type="number" id="diemkthp"><br><br>
+        <button onclick="tongdiem();">Tính điểm</button>
+        <p>Tổng điểm môn học:</p>
+        <p id="result"></p>
+        <script type="text/javascript">
+            function tongdiem(){
+                var cc = document.getElementById("diemcc").value;
+                var kt = document.getElementById("diemkt").value;
+                var kthp = document.getElementById("diemkthp").value;
+
+                document.getElementById("result").innerHTML=cc*0.2+kt*0.2+kthp*0.6;
+            }
+        </script>
+
+        <p>
+            A (8.5- 10)<br>
+            B+ (8.0 - 8.4)<br>
+            B (7.0 - 7.9)<br>
+            C+ (6.5 - 6.9)<br>
+            C (5.5 - 6,4)<br>
+            D+ (5.0 - 5.4)<br>
+            D (4.0 - 4.9)<br>
+            F (dưới 4.0)<br>
+        </p>
+</body>
+</html>
